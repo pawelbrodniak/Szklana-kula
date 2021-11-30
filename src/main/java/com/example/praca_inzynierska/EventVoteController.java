@@ -28,10 +28,10 @@ public class EventVoteController extends HttpServlet {
     }
 
     private EventVote createEventVote(HttpServletRequest request) {
-        Integer discoveryId = Integer.valueOf(request.getParameter("id"));
+        Integer eventId = Integer.valueOf(request.getParameter("id"));
         String voteType = request.getParameter("type");
         String username = request.getUserPrincipal().getName();
-        EventVote eventVote = new EventVote(username, discoveryId, voteType);
+        EventVote eventVote = new EventVote(username, eventId, voteType);
         return eventVote;
     }
 }

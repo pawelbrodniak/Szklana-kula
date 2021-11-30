@@ -17,6 +17,8 @@ class EventVoteService {
         voteDao.save(voteToSave);
     }
 
+
+
     private static class EventVoteMapper {
         private final UserDao userDao = new UserDao();
 

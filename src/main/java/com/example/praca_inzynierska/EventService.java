@@ -32,6 +32,7 @@ public class EventService {
 
     private static class EventMapper {
         private final UserDao userDao = new UserDao();
+        private final VoteDao voteDao = new VoteDao();
 
         EventBasicInfo map(Event d) {
             return new EventBasicInfo(
@@ -40,7 +41,8 @@ public class EventService {
                     d.getTeamB(),
                     d.getRate(),
                     d.getDateAdded(),
-                    userDao.findById(d.getUserId()).orElseThrow().getUsername()
+                    userDao.findById(d.getUserId()).orElseThrow().getUsername(),
+                    voteDao.addScore(d.getId())
             );
         }
 

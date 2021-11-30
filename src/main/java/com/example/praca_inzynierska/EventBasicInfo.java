@@ -9,6 +9,9 @@ public class EventBasicInfo {
     private Integer rate;
     private LocalDateTime dateAdded;
     private String author;
+    private int voteCount;
+
+
 
     public EventBasicInfo(
             Integer id,
@@ -16,13 +19,17 @@ public class EventBasicInfo {
             String teamB,
             Integer rate,
             LocalDateTime dateAdded,
-            String author) {
+            String author,
+            int voteCount) {
         this.id = id;
         this.teamA = teamA;
         this.teamB = teamB;
         this.rate = rate;
         this.dateAdded = dateAdded;
         this.author = author;
+        this.voteCount = voteCount;
+
+
     }
 
     public String getAuthor() {
@@ -71,5 +78,13 @@ public class EventBasicInfo {
 
     public void setDateAdded(LocalDateTime dateAdded) {
         this.dateAdded = dateAdded;
+    }
+
+    public int getVoteCount() {
+        return voteCount;
+    }
+
+    public void setVoteCount(int voteCount) {
+        this.voteCount = voteCount;
     }
 }
