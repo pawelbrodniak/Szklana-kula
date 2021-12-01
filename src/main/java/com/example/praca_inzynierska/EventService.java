@@ -42,7 +42,8 @@ public class EventService {
                     d.getRate(),
                     d.getDateAdded(),
                     userDao.findById(d.getUserId()).orElseThrow().getUsername(),
-                    voteDao.addScore(d.getId())
+                    voteDao.addScore(d.getId()),
+                    voteDao.addPoints(d.getId())
             );
         }
 

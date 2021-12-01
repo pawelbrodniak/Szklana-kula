@@ -22,6 +22,7 @@ public class CategoryDao extends BaseDao  {
                     id, name
                 FROM
                     category
+                ORDER BY id
                 """;
         try (Connection connection = getConnection();
              Statement statement = connection.createStatement()) {

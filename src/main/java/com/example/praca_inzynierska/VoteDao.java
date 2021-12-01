@@ -44,5 +44,18 @@ public int addScore(int eventId) {
     return 0;
 }
 
+    public int addPoints(Integer id) {
+        final String query = """
+                    update user inner join vote on user.id = vote.user_id set 
+                    points = (select  sum(score) from vote where user_id = user.id )
+                """;
+        try (Connection connection = getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return 0;
+    }
 
 }
