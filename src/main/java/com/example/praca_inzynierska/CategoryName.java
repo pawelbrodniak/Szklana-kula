@@ -9,6 +9,9 @@ public class CategoryName {
         this.name = name;
     }
 
+    public CategoryName(String name, Integer points) {
+    }
+
     public Integer getId() {
         return id;
     }
