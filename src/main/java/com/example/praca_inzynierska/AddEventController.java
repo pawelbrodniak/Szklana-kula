@@ -42,7 +42,7 @@ public class AddEventController extends HttpServlet {
         return new EventSaveRequest(
                 request.getParameter("teamA"),
                 request.getParameter("teamB"),
-                request.getIntHeader("rate"),
+                Integer.valueOf(request.getParameter("rate")),
                 Integer.valueOf(request.getParameter("categoryId")),
                 loggedInUsername
         );

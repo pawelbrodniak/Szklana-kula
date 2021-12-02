@@ -17,13 +17,27 @@
     </aside>
 
     <main>
-        <article >
-            <h2>Klasyfikacja generalna graczy:</h2>
-            <c:forEach var="classification" items="${requestScope.classifications}">
-                <li><a>
-                    <c:out value="${classification.name}"/> -> <c:out value="${classification.points}"/></a></li>
-            </c:forEach>
-        </article>
+        <c:if test="${not empty requestScope.classifications}">
+            <section class = table>
+                <h2>Klasyfikacja generalna graczy:</h2>
+                <table border="1">
+                    <thead>
+                    <tr>
+                        <th>Nazwa użytkownika</th>
+                        <th>Punkty</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <c:forEach var="classification" items="${requestScope.classifications}">
+                        <tr>
+                            <td><c:out value="${classification.name}"/></td>
+                            <td>${classification.points}</td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
+            </section>
+        </c:if>
     </main>
     <%@ include file="../segments/footer.jspf" %>
 </div>

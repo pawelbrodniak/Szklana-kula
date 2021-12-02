@@ -104,20 +104,24 @@ footer {
 
 /* kolor kafelków */
 .categoriess > ul > li {
-    background-color: #29a01b;
+    background-color: #5856D6;
 }
 
 /* kolor kafelków */
-.categoriess > ul > li:nth-child(3n) {
+.categoriess > ul > li:nth-child(4n) {
     background-color: #dc9e18;
 }
 
-.categoriess > ul > li:nth-child(3n+1) {
+.categoriess > ul > li:nth-child(4n+1) {
     background-color: #29a01b;
 }
 
-.categoriess > ul > li:nth-child(3n+2) {
-    background-color: #ee521e;
+.categoriess > ul > li:nth-child(4n+2) {
+    background-color: #ee4914;
+}
+
+.categoriess > ul > li:nth-child(4n+3) {
+    background-color: #1e41ee;
 }
 
 /* kafelki mają wypełniać całą przestrzeń i być lekko przezroczyste */
@@ -152,3 +156,4 @@ kafelki mają zajmować tyle samo miejsca */
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+

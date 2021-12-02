@@ -11,8 +11,9 @@ public class EventBasicInfo {
     private String author;
     private int voteCount;
     private int points;
-
-
+    private int voteTEAMA;
+    private int voteDRAW;
+    private int voteTEAMB;
 
     public EventBasicInfo(
             Integer id,
@@ -22,7 +23,10 @@ public class EventBasicInfo {
             LocalDateTime dateAdded,
             String author,
             int voteCount,
-            int points) {
+            int points,
+            int voteTEAMA,
+            int voteDRAW,
+            int voteTEAMB) {
         this.id = id;
         this.teamA = teamA;
         this.teamB = teamB;
@@ -31,7 +35,9 @@ public class EventBasicInfo {
         this.author = author;
         this.voteCount = voteCount;
         this.points = points;
-
+        this.voteTEAMA = voteTEAMA;
+        this.voteDRAW = voteDRAW;
+        this.voteTEAMB = voteTEAMB;
     }
 
     public String getAuthor() {
@@ -96,5 +102,29 @@ public class EventBasicInfo {
 
     public void setPoints(int points) {
         this.points = points;
+    }
+
+    public int getVoteTEAMA() {
+        return voteTEAMA;
+    }
+
+    public void setVoteTEAMA(int voteTEAMA) {
+        this.voteTEAMA = voteTEAMA;
+    }
+
+    public int getVoteDRAW() {
+        return voteDRAW;
+    }
+
+    public void setVoteDRAW(int voteDRAW) {
+        this.voteDRAW = voteDRAW;
+    }
+
+    public int getVoteTEAMB() {
+        return voteTEAMB;
+    }
+
+    public void setVoteTEAMB(int voteTEAMB) {
+        this.voteTEAMB = voteTEAMB;
     }
 }
