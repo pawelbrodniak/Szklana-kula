@@ -5,8 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.ResultSet;
 
-public class VoteDao extends BaseDao {
-    public void save(Vote vote) {
+public class VoteFinallDao extends BaseDao {
+    public void save(VoteFinall votefinall) {
         final String query = """
                 INSERT INTO
                     vote (user_id, event_id, type, date_added)
@@ -17,35 +17,35 @@ public class VoteDao extends BaseDao {
                 """;
         try (Connection connection = getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setInt(1, vote.getUserId());
-            statement.setInt(2, vote.getEventId());
-            statement.setString(3, vote.getType().toString());
-            statement.setObject(4, vote.getDateAdded());
-            statement.setString(5, vote.getType().toString());
+            statement.setInt(1, votefinall.getUserId());
+            statement.setInt(2, votefinall.getEventId());
+            statement.setString(3, votefinall.getType().toString());
+            statement.setObject(4, votefinall.getDateAdded());
+            statement.setString(5, votefinall.getType().toString());
             statement.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
 
-public int addScore(int eventId) {
+    public int addScore(int eventId) {
         final String query = """
-                   /*   update vote set score = 1 * (select rate from event where id = ?)
+                      update vote set score = 1 * (select rate from event where id = ?)
                       where event_id = ? and 
                       type =  (select * from (select type from vote where
-                      event_id = ? and user_id = 12) x)  and user_id != 12*/
+                      event_id = ? and user_id = 12) x)  and user_id != 12
                 """;
         try (Connection connection = getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
-           /* statement.setInt(1, eventId);
+            statement.setInt(1, eventId);
             statement.setInt(2, eventId);
-            statement.setInt(3, eventId);*/
+            statement.setInt(3, eventId);
             statement.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-    return 0;
-}
+        return 0;
+    }
 
     public int addPoints(Integer id) {
         final String query = """

@@ -2,6 +2,6 @@
 <ul>
     <li><a href="${pageContext.request.contextPath}/classification">Klasyfikacja</a></li>
     <li><a href="${pageContext.request.contextPath}/group/addevent">Dodaj wydarzenie</a></li>
-    <li><a href="${pageContext.request.contextPath}/votefinal">Dodaj wynik</a></li>
+    <li><a href="${pageContext.request.contextPath}/addresult">Dodaj wynik</a></li>
     <li><a href="${pageContext.request.contextPath}/rule">Zasady gry</a></li>
 </ul>
