@@ -14,11 +14,7 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet("/addresult")
-@ServletSecurity(
-        httpMethodConstraints = {
-                @HttpMethodConstraint(value = "GET", rolesAllowed = "USER")
-        }
-)
+
 
 public class AddResultPageController extends HttpServlet {
     private final CategoryService categoryService = new CategoryService();

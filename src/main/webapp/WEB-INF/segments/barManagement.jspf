@@ -1,0 +1,6 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<ul>
+    <li><a href="${pageContext.request.contextPath}/addresult">Dodaj wynik końcowy</a></li>
+    <li><a href="${pageContext.request.contextPath}/group/addevent">Dodaj wydarzenie</a></li>
+    <li><a href="${pageContext.request.contextPath}/confirm">Zrestartuj</a></li>
+</ul>

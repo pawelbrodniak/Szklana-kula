@@ -23,7 +23,7 @@ public class EventFinallDao extends BaseDao {
                 SELECT
                     id, teamA, teamB, rate,  date_added, category_id, user_id
                 FROM
-                    event d
+                    event d order by date_added desc
                 """;
         try (Connection connection = getConnection();
              Statement statement = connection.createStatement()) {
@@ -45,7 +45,7 @@ public class EventFinallDao extends BaseDao {
                 FROM
                     event
                 WHERE
-                    category_id = ?
+                    category_id = ? order by date_added desc
                 """;
         try (Connection connection = getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {

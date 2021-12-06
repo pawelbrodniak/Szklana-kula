@@ -13,12 +13,7 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet("/group/addevent")
-@ServletSecurity(
-        httpMethodConstraints = {
-                @HttpMethodConstraint(value = "GET", rolesAllowed = "USER"),
-                @HttpMethodConstraint(value = "POST", rolesAllowed = "USER")
-        }
-)
+
 public class AddEventController extends HttpServlet {
     private CategoryService categoryService = new CategoryService();
     private EventService eventService = new EventService();
@@ -34,7 +29,7 @@ public class AddEventController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         EventSaveRequest saveRequest = createSaveRequest(request);
         eventService.add(saveRequest);
-        response.sendRedirect(request.getContextPath());
+        request.getRequestDispatcher("/WEB-INF/views/management.jsp").forward(request, response);
     }
 
     private EventSaveRequest createSaveRequest(HttpServletRequest request) {

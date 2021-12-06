@@ -1,5 +1,6 @@
 package com.example.praca_inzynierska;
 
+import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.HttpMethodConstraint;
 import jakarta.servlet.annotation.ServletSecurity;
 import jakarta.servlet.annotation.WebServlet;
@@ -10,21 +11,24 @@ import com.example.praca_inzynierska.EventVoteFinall;
 import com.example.praca_inzynierska.EventVoteFinallService;
 
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet("/event/votefinall")
-@ServletSecurity(
-        httpMethodConstraints = {
-                @HttpMethodConstraint(value = "GET", rolesAllowed = "USER")
-        }
-)
+
 public class EventVoteFinallController extends HttpServlet {
     private EventVoteFinallService votefinallService = new EventVoteFinallService();
+    private final CategoryService categoryService = new CategoryService();
+    private EventFinallService eventFinallService = new EventFinallService();
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         EventVoteFinall eventVoteFinall = createEventVoteFinall(request);
         votefinallService.addVoteFinall(eventVoteFinall);
-        response.sendRedirect(request.getContextPath());
+        List<EventBasicInfo> events = eventFinallService.findAll();
+        request.setAttribute("events", events);
+        List<CategoryName> categories = categoryService.findAllCategoryNames();
+        request.setAttribute("categories", categories);
+        request.getRequestDispatcher("/WEB-INF/views/addResult.jsp").forward(request, response);
     }
 
     private EventVoteFinall createEventVoteFinall(HttpServletRequest request) {
