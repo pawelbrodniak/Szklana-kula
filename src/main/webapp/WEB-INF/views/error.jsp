@@ -7,6 +7,7 @@
     <title>Szklana kula - brak uprawnień</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/main.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/xxx.css">
 </head>
 <body>
 <div class="container">
@@ -16,7 +17,7 @@
 
     <main>
         <article >
-            <h2>Brak uprawnień</h2>
+            <h1>Brak odpowiednich uprawnień</h1>
             <a href="${pageContext.request.contextPath}/" > Przejdź do strony głównej </a>
         </article>
     </main>

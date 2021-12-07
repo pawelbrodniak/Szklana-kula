@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/main.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/forms.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/xxx.css">
 </head>
 <body>
 <div class="container">
@@ -15,11 +16,6 @@
 
     <aside class="categories">
         <%@ include file="../segments/barGroup.jspf" %>
-    </aside>
-
-    <aside class="categoriess">
-        <h2>Kategorie</h2>
-        <%@ include file="../segments/barCategory.jspf" %>
     </aside>
 
     <main>

@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/main.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/forms.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/xxx.css">
 </head>
 <body>
 <div class="container">
@@ -18,7 +19,7 @@
         <input name="j_username" placeholder="Nazwa użytkownika" required>
         <input name="j_password" placeholder="Hasło" type="password" required>
         <button class="user-form-button">Zaloguj się</button>
-        <p>Nie masz konta? <a href="${pageContext.request.contextPath}/signup">Zarejestruj się</a></p>
+        <p id="question">Nie masz konta? <a href="${pageContext.request.contextPath}/signup">Zarejestruj się</a></p>
     </form>
 
     <%@ include file="../segments/footer.jspf" %>

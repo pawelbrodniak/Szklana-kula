@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/main.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/forms.css">
-
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/xxx.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
@@ -17,11 +17,9 @@
 
     <form class="user-form">
         <h2 class="user-form-title">Czy na pewno chcesz zrestartować grę?</h2>
-        <ul>
-            <li><a href="${pageContext.request.contextPath}/deleteall">Tak, usuń wszystko</a></li>
-            <li><a href="${pageContext.request.contextPath}/delete">Tak, usuń wydarzenia i typy</a></li>
-            <li><a href="${pageContext.request.contextPath}/">Nie</a></li>
-        </ul>
+        <aside class="categories">
+            <%@ include file="../segments/barConfirm.jspf" %>
+        </aside>
     </form>
     <a href="${pageContext.request.contextPath}/group/addevent" class="discovery-add-button">
         <i class="fa fa-plus"></i>

@@ -1,0 +1,6 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<ul >
+    <li><a href="${pageContext.request.contextPath}/deleteall">Tak, usuń wszystko</a></li>
+    <li><a href="${pageContext.request.contextPath}/delete">Tak, usuń wydarzenia i typy</a></li>
+    <li><a href="${pageContext.request.contextPath}/">Nie</a></li>
+</ul>

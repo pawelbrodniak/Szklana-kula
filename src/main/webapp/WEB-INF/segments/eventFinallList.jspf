@@ -3,8 +3,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:forEach var="event" items="${requestScope.events}">
     <article class="discovery">
-        <p class="discovery-header"><c:out value="${event.teamA}"/> vs <c:out value="${event.teamB}"/> -> współczynnik (<c:out value="${event.rate}"/>)</p>
-        <p class="discovery-details">Dodane przez: ${event.author}, ${event.dateAdded.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"))}</p>
+        <h2 class="discovery-header"><c:out value="${event.teamA}"/> vs <c:out value="${event.teamB}"/> </h2>
+        <p id="author">Dodane przez: ${event.author}, ${event.dateAdded.format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm"))}</p>
+        <p id="rate">Współczynnik [<c:out value="${event.rate}"/>]</p>
         <section class="categories">
             <ul>
                 <li><a href="${pageContext.request.contextPath.concat('/event/votefinall?id=').concat(event.id).concat('&type=TEAMA')}"><c:out value="${event.teamA}"/> wygra (<c:out value="${event.voteTEAMA}"/>)</a></li>
