@@ -4,7 +4,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Zarejestruj się</title>
+    <title>Szklana kula - rejestracja</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/main.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/forms.css">
@@ -14,9 +14,9 @@
     <%@ include file="../segments/header.jspf" %>
 
     <form action="${pageContext.request.contextPath}/signup" method="post" class="user-form">
-        <h2 class="user-form-title">Zarejestruj się na ReadStack</h2>
+        <h2 class="user-form-title">Zarejestruj się do Szklanej kuli</h2>
         <input name="username" placeholder="Nazwa użytkownika" required>
-        <input name="email" placeholder="email" type="email" required>
+        <input name="email" placeholder="Adres e-mail (xyz@example.com)" type="email"  required>
         <input name="password" placeholder="Hasło" type="password" required>
         <button class="user-form-button">Zarejestruj się</button>
     </form>

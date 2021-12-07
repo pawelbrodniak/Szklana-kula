@@ -20,7 +20,7 @@
         <c:if test="${not empty requestScope.classifications}">
             <section class = table>
                 <h2>Klasyfikacja generalna graczy:</h2>
-                <table border="1">
+                <table>
                     <thead>
                     <tr>
                         <th>Nazwa użytkownika</th>

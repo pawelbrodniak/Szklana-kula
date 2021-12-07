@@ -15,12 +15,9 @@
     <%@ include file="../segments/header.jspf" %>
 
     <aside class="categories">
-        <%@ include file="../segments/barGroup.jspf" %>
+        <%@ include file="../segments/barManagement.jspf" %>
     </aside>
-    <aside class="categoriess">
-        <h2>Kategorie</h2>
-        <%@ include file="../segments/barCategory.jspf" %>
-    </aside>
+
 
     <main>
         <h2>Dodawanie wyników końcowych:</h2>

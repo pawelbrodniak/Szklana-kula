@@ -22,7 +22,7 @@
     </aside>
 
     <main>
-        <h2>Twoje dostępne wydarzenia sportowe:</h2>
+        <h2>Dostępne wydarzenia sportowe do typowania:</h2>
         <%@ include file="./WEB-INF/segments/eventList.jspf" %>
     </main>
     <%@ include file="./WEB-INF/segments/footer.jspf" %>

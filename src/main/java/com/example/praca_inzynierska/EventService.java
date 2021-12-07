@@ -44,6 +44,7 @@ public class EventService {
                     userDao.findById(d.getUserId()).orElseThrow().getUsername(),
                     voteDao.addScore(d.getId()),
                     voteDao.addPoints(d.getId()),
+                    voteDao.addPoints(d.getId()),
                     voteDao.countTEAMA(d.getId()),
                     voteDao.countDRAW(d.getId()),
                     voteDao.countTEAMB(d.getId())

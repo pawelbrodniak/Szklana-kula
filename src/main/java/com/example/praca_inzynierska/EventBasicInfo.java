@@ -11,6 +11,7 @@ public class EventBasicInfo {
     private String author;
     private int voteCount;
     private int points;
+    private int points0;
     private int voteTEAMA;
     private int voteDRAW;
     private int voteTEAMB;
@@ -24,6 +25,7 @@ public class EventBasicInfo {
             String author,
             int voteCount,
             int points,
+            int points0,
             int voteTEAMA,
             int voteDRAW,
             int voteTEAMB) {
@@ -35,6 +37,7 @@ public class EventBasicInfo {
         this.author = author;
         this.voteCount = voteCount;
         this.points = points;
+        this.points0 = points0;
         this.voteTEAMA = voteTEAMA;
         this.voteDRAW = voteDRAW;
         this.voteTEAMB = voteTEAMB;
@@ -126,5 +129,13 @@ public class EventBasicInfo {
 
     public void setVoteTEAMB(int voteTEAMB) {
         this.voteTEAMB = voteTEAMB;
+    }
+
+    public int getPoints0() {
+        return points0;
+    }
+
+    public void setPoints0(int points0) {
+        this.points0 = points0;
     }
 }

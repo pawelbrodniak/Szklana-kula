@@ -4,7 +4,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Nowe wydarzenie</title>
+    <title>Szklana kula - nowe wydarzenie</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/main.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/forms.css">

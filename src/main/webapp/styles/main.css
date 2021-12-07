@@ -95,7 +95,13 @@ kafelki mają zajmować tyle samo miejsca */
     font-size: 1.2rem;
 
 }
-
+/* ramka i odstępy */
+.discovery {
+    border: 1px solid #BDBDBD;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 16px;
+}
 
 footer {
     margin-top: 20px;
@@ -169,4 +175,20 @@ kafelki mają zajmować tyle samo miejsca */
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.table{
+    border-color: gray;
+    border-width: 1px;
+    border-style: solid;
+    width: 100%;
+}
+
+.discovery-header {
+    margin: 0;
+}
+/* zmiana czcionki "Dodane przez..." */
+#author {
+    color: #c50e0e;
+    font-size: 0.8rem;
 }

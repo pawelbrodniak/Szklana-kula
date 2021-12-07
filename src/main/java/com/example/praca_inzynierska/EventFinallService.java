@@ -43,6 +43,7 @@ public class EventFinallService {
                     d.getDateAdded(),
                     userDao.findById(d.getUserId()).orElseThrow().getUsername(),
                     voteFinallDao.addScore(d.getId()),
+                    voteFinallDao.addScore0(d.getId()),
                     voteFinallDao.addPoints(d.getId()),
                     voteFinallDao.countTEAMA(d.getId()),
                     voteFinallDao.countDRAW(d.getId()),

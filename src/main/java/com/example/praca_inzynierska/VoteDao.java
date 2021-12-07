@@ -46,7 +46,23 @@ public int addScore(int eventId) {
         }
     return 0;
 }
-
+    public int addScore0(int eventId) {
+        final String query = """
+                      update vote set score = 0
+                      where event_id = ? and 
+                      type !=  (select * from (select type from vote where
+                      event_id = ? and user_id = 12) x)  and user_id != 12
+                """;
+        try (Connection connection = getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setInt(1, eventId);
+            statement.setInt(2, eventId);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return 0;
+    }
     public int addPoints(Integer id) {
         final String query = """
                     update user inner join vote on user.id = vote.user_id set 
