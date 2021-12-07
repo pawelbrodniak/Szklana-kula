@@ -4,6 +4,7 @@
     font-weight: bold;
     font-size: 0.9rem;
 }
+/* zmiana czcionki współczynnik*/
 #rate {
     color: #211f2b;
     font-weight: bold;
@@ -17,7 +18,7 @@
     padding: 16px;
 }
 
-
+/* zmiana koloru tła*/
 body{
     background-color: rgb(162, 158, 158);
 }
@@ -111,21 +112,7 @@ kafelki mają zajmować tyle samo miejsca */
 }
 
 
-
-/* ramka i odstępy */
-.ramka {
-    background-color: #917cfa;
-    border: 1px solid #BDBDBD;
-    color: white;
-    border-radius: 4px;
-    margin-top: 10px;
-    padding: 16px;
-    font-size: 1.2rem;
-
-}
-/* ramka i odstępy */
-
-
+/*stopka*/
 footer {
     margin-top: 20px;
     text-align: center;
@@ -188,18 +175,18 @@ kafelki mają zajmować tyle samo miejsca */
 
 .discovery-add-button {
     position:fixed;
-    width:50px;
-    height:50px;
-    bottom:40px;
-    right:40px;
-    background-color:#4CD964;
+    width:60px;
+    height:60px;
+    bottom:50px;
+    right:50px;
+    background-color: #03e12c;
     color:#FFF;
     box-shadow: 2px 2px 3px #999;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+/*tabela*/
 table, tr, td {
     border-color: #ffffff ;
     border-width: 1px;
